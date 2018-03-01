@@ -1,0 +1,136 @@
+.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img/bg-main.jpg") center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    border-bottom: solid 10px $mainYellow;
+
+    // Name
+    &__name-container {
+        position: absolute;
+        padding: 1rem;
+        right: 25px;
+        color: $mainYellow;
+
+        h3 {
+            font-family: Lobster, sans-serif;
+            font-size: 3rem;
+        }
+    }
+
+    // Search
+    .search {
+        &__title {
+            padding-top: 50px;
+            font-size: 2rem;
+            line-height: 1.4;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: $mainYellow;
+            font-family: "Roboto Slab", sans-serif;
+        }
+        &__input {
+            display: inline-block;
+            width: 20%;
+            margin: 0 auto 50px;
+            padding: 1rem;
+            border: 0;
+            color: white;
+            background: transparent;
+            border-bottom: solid 2px #472626;
+            font-weight: lighter;
+            letter-spacing: 1px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        .btn {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: white;
+            margin-left: 25px;
+            background: $mainYellow;
+            border-radius: 3px;
+            border: solid 2px $mainYellow;
+            padding: 1rem 3rem;
+
+            &--shallow {
+                background: transparent;
+
+                &:hover {
+                    background-color: $mainYellow;
+                }
+            }
+        }
+    }
+
+    // Out-content
+    &__out-content {
+        width: 1000px;
+        max-height: 65%;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        overflow-y: scroll;
+
+            // Navbar
+        .navbar {
+
+            .btn {
+                margin-left: 1rem;
+                color: white;
+
+                &:hover {
+                    color: #eeb83b;
+                }
+                &:active {
+                    color: yellowgreen;
+                }
+            }
+        }
+            // Table
+        #table{
+            thead{
+                th{
+                    color: $mainYellow;
+                }
+            }
+            tbody{
+                tr{
+                    color: #472626;
+                    font-size: 1rem;
+                    background: #f1f1f1;
+
+                    .owner{
+                        width: 10%;
+                    }
+                    .repositories{
+                        width: 40%;
+                    }
+                    .update{
+                        font-size: 0.9rem;
+                        width: 15%;
+                    }
+                    .language{
+                        width: 10%;
+                    }
+                    .remove{
+                        background: #820e19;
+                    }
+                    .info, .open{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+        // hide-content
+    .hide-content{
+        opacity: 0;
+    }
+        // show-content
+    .show-content{
+        opacity: 1;
+    }
+}

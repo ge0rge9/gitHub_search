@@ -1,0 +1,56 @@
+<div class="main">
+	
+	
+	<!--Name-->
+	<div class="main__name-container">
+		<h3 class="main__name-container__name">George Poladashili</h3>
+	</div>
+	
+	<!--Search-->
+	<div class="search">
+		<!--Title-->
+		<div class="col-lg-12 col-md-12">
+			<div class="search__container">
+				<h3 class="search__title">Search repositories <br> for GitHub</h3>
+			</div>
+		</div>
+		<!--Input and button-->
+		<div class="search__input-container">
+			<input type="text" id="search" class="search__input" placeholder="Enter a repositories">
+			<span>
+			<a class="btn btn--shallow searchButton">Search</a>
+		</span>
+		</div>
+	</div>
+	
+	<!--Out-content-->
+	<div class="container main__out-content hide-content">
+		
+		<!--Navbar-->
+		<nav class="navbar navbar-dark bg-dark">
+			<span class="size navbar-text" id="res-size"></span>
+			<div class="navbar__page">
+				<span class="page navbar-text" id="page-size"></span>
+				<a class="btn btn-sm" id="prev">&#8592;</a>
+				<a class="btn btn-sm" id="next">&#8594;</a>
+			</div>
+		</nav>
+		
+		<!--Table-->
+		<table id="table" class="table table-sm table-responsive">
+			<thead>
+			<tr class="thead-dark">
+				<th>Login owner</th>
+				<th>Repositories</th>
+				<th>Last update</th>
+				<th>Language</th>
+				<th>Actions</th>
+			</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	
+	</div>
+
+
+</div>
