@@ -24,4 +24,16 @@ class Element {
         parent.appendChild(this.childElem);
     }
 
+    event (type, callback){
+        this.childElem.addEventListener(type, callback);
+    }
+
+    disabld_true () {
+        this.childElem.setAttribute("disabled", "disabled");
+    }
+
+    disabld_false () {
+        this.childElem.removeAttribute("disabled");
+    }
+
 }

@@ -77,6 +77,9 @@
             // Navbar
         .navbar {
 
+            .navbar__page{
+                display: flex;
+            }
             .btn {
                 margin-left: 1rem;
                 color: white;
@@ -127,10 +130,21 @@
     }
         // hide-content
     .hide-content{
+        transition: 0s ease;
         opacity: 0;
     }
         // show-content
     .show-content{
         opacity: 1;
+    }
+
+    // empty
+    .empty{
+        font-size: 2rem;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: $mainYellow;
+        font-family: "Roboto Slab", sans-serif;
     }
 }
