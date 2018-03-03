@@ -29,17 +29,21 @@ function showData (currPage = 1, perPage = 100) {
         prev.event("click", () => showData(currPage - 1));
         next.event("click", () => showData(currPage + 1));
 
-        if(currPage < totalPages){
-            prev.render(parentPage);
-            next.render(parentPage);
-            prev.disabld_true();
+        if(totalPages > 1){
 
-            currPage > 1 ? prev.disabld_false() : null;
+            if(currPage < totalPages){
+                prev.render(parentPage);
+                next.render(parentPage);
+                prev.disabld_true();
 
-        } else {
-            prev.render(parentPage);
-            next.render(parentPage);
-            next.disabld_true();
+                currPage > 1 ? prev.disabld_false() : null;
+
+            } else {
+                prev.render(parentPage);
+                next.render(parentPage);
+                next.disabld_true();
+            }
+
         }
 
         showContentBlock();
@@ -53,7 +57,14 @@ function showData (currPage = 1, perPage = 100) {
 
 // Показть навбар
 function showNavbar (size) {
-    size > 0 ? (showResultSize(size), showPageSize(size)) : showEmpty();
+
+    if(size > 0) {
+        showResultSize(size);
+        showPageSize(size);
+    } else {
+        showEmpty();
+    }
+
 }
 
         // Показать количество результатов
